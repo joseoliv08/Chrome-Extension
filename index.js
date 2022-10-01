@@ -20,7 +20,14 @@ function renderLeads() {
 
 //Print out the list of leads through a for loop /// innerHTML allows to parse string tags into html code
     for(i = 0; i < myLeads.length; i++) {
-    listItems += "<li>" + myLeads[i] + "</li>" // += is used here because otherwise only the last lead of the array would be listed
+    // Template strings
+    listItems += `
+        <li>
+            <a target='_blank' href='${myLeads[i]}'>
+                ${myLeads[i]}
+            </a>
+        </li>
+                 ` // += is used here because otherwise only the last lead of the array would be listed
     //create element
     //set text content
     //append to url
